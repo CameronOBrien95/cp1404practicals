@@ -14,7 +14,12 @@ def main():
 def get_data():
     """Read data from file formatted like: subject,lecturer,number of students."""
     input_file = open(FILENAME)
+    my_list = []
+    count = 0
     for line in input_file:
+        my_list[count][0].append(line)
+        count += 1
+        print("my list {}".format(my_list))
         print(line)  # See what a line looks like
         print(repr(line))  # See what a line really looks like
         line = line.strip()  # Remove the \n
@@ -24,6 +29,10 @@ def get_data():
         print(parts)  # See if that worked
         print("----------")
     input_file.close()
+    return my_list
+
+
+
 
 
 main()
