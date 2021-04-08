@@ -9,4 +9,3 @@ longest_word = max((len(word) for word in word_count))
 print(longest_word)
 for word in sorted(word_count):
     print("{:{}} : {}".format(word, longest_word, word_count[word]))
-
