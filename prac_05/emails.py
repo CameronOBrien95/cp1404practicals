@@ -1,3 +1,8 @@
+"""
+CP1404/CP5632 Practical
+Email to name dictionary
+"""
+
 email_name = {}
 email = input("Email: ")
 valid = False
