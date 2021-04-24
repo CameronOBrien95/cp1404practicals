@@ -1,3 +1,7 @@
+"""
+CP1404/CP5632 Practical
+Count word occurrences in a string
+"""
 word_count = {}
 sentence = input("Text: ")
 for word in sentence.split(" "):
