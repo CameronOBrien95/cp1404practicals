@@ -28,7 +28,21 @@ def main():
 
 def get_fixed_filename(filename):
     """."""
-    new_name = filename.replace(" ", "_").replace(".TXT", ".txt")
+    name_to_change = filename.replace(" ", "_").replace(".TXT", ".txt")
+    new_name = ""
+    caps_counter = 0
+    if not "_" in name_to_change:
+        for char in name_to_change:
+            if char.isupper():
+                if caps_counter == 0:
+                    new_name += char
+                elif caps_counter > 0:
+                    new_name += "_" + char
+            else:
+                new_name += char
+            caps_counter += 1
+    else:
+        new_name = name_to_change
     return new_name
 
 
@@ -47,5 +61,5 @@ def demo_walk():
             os.rename(old_name, new_name)
 
 
-# main()
-demo_walk()
+main()
+# demo_walk()
